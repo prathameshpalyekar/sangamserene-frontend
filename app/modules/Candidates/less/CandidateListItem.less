@@ -1,0 +1,83 @@
+.job-candidates-list-item {
+    padding: 40px 80px;
+    border-bottom: 4px solid #f3f1f0;
+    position: relative;
+    .view-profile-link {
+        padding-top: 50px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #00aa3c;
+        position: absolute;
+        top: calc(50% - 12px);
+        right: 80px;
+        &:before {
+            color: #c3c3c3;
+            content: "\E258";
+            font-family: 'Glyphicons Halflings';
+            position: absolute;
+            top: 0;
+            font-size: 24px;
+            left: 50%;
+            margin-left: -12px;
+        }
+    }
+    &.profile-popup-on {
+        .view-profile-link  {
+            right: 230px;
+        }
+    }
+    &.selected {
+        .view-profile-link {
+            &:before {
+                content: "\e257";
+            }
+        }
+    }
+    .-tip {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .sick-reported-shifts {
+        margin-bottom: 15px;
+        .-shift-date {
+            font-size: 12px;
+        }
+    }
+    .candidate-name {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.33;
+        color: #3c3c3c;
+    }
+    .candidate-completed-jobs {
+        font-size: 16px;
+        line-height: 1.25;
+        color: #3c3c3c;
+        span {
+            font-weight: bold;
+        }
+    }
+    .candidate-avg-rating {
+        margin-top: 24px;
+    }
+    .rating-text {
+        float: left;
+        margin-right: 15px;
+        font-size: 12px;
+        margin-top: 2px;
+    }
+    .review-link {
+        font-size: 12px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+}
+
+.candidate-pic {
+    object-fit: cover;
+    width: 20vw;
+    height: 20vw;
+    max-height: 88px;
+    max-width: 88px;
+}

@@ -1,0 +1,42 @@
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+    min-height: 20px;
+    padding: 18px 15px 18px 15px;
+    margin-bottom: 20px;
+    background-color: @well-bg;
+    border-radius: 3px;
+    border-radius: @border-radius-base;
+    blockquote {
+        border-color: #ddd;
+        border-color: rgba(0,0,0,.15);
+    }
+}
+
+// Sizes
+.well-lg {
+  padding: 24px;
+  border-radius: @border-radius-large;
+}
+.well-sm {
+  padding: 12px;
+  border-radius: @border-radius-small;
+}
+
+// Variations
+.well-note {
+    background-color: #e6f1e2;
+    > *:last-child {
+        margin-bottom: 0;
+    }
+    &.well-sm {
+        p {
+            font-size: 10px;
+            line-height: 1.4em;
+        }
+    }
+}

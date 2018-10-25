@@ -1,0 +1,40 @@
+@import "../../less/variable.less";
+.site-footer {
+    width: 100%;
+    padding: 0 @sitePadding;
+    box-sizing: border-box;
+    height: 68px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.site-navigation {
+    list-style: none;
+    margin: 25px 0 0;
+    padding: 0;
+    text-align: center;
+    li {
+        margin: 0;
+        padding: 0 15px;
+        display: inline-block;
+        vertical-align: middle;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    .copyright-text {
+        .font-book;
+        font-size: 12px;
+    }
+
+    .site-nav-link {
+        display: inline-block;
+        .font-book;
+        font-size: 12px;
+        color: @green;
+        text-decoration: none;
+    }
+}

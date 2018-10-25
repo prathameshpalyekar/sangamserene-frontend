@@ -1,0 +1,133 @@
+@import "../../../less/variable.less";
+
+@whiteboard-horizontal-space: 80px;
+
+.whiteboard {
+    background-color: #fff;
+    // padding: 22px @whiteboard-horizontal-space 20px;
+    padding: 22px 0 20px;
+}
+
+.whiteboard-title {
+    margin: 18px 0 5px;
+    font-family: Gotham-Medium;
+    font-size: 28px;
+    // font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.whiteboard-sub-title {
+    font-family: Gotham-Medium;
+    font-size: 16px;
+    // font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.whiteboard-header {
+    padding: 10px @whiteboard-horizontal-space 20px @whiteboard-horizontal-space;
+    //margin: -20px -@whiteboard-horizontal-space 0;
+    border-bottom: 4px solid #f3f1f0;
+    .-menu-buttons {
+        .btn:not(:last-child) {
+            margin-right: 9px;
+        }
+    }
+}
+
+.whiteboard-header-back {
+    border: 0 none;
+    color: fade(#3c3c3c, 30%);
+    .font-medium();
+    font-weight: normal;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    span {
+        margin-right: 7px;
+        font-size: 9px;
+    }
+    &:hover, &:focus, &:active, &:active:hover {
+        background-color: transparent;
+    }
+}
+
+// FIXME: This will not be used in this layout maybe
+.whiteboard-pull {
+    margin-left: -@whiteboard-horizontal-space;
+    margin-right: -@whiteboard-horizontal-space;
+    &.-top {
+        margin-top: -20px;
+    }
+    &.-restore-horizontal-space {
+        padding-left: @whiteboard-horizontal-space;
+        padding-right: @whiteboard-horizontal-space;
+    }
+    &.-sep-bottom {
+        border-bottom: 1px solid #f3f1f0;
+    }
+    &.-sep-top {
+        border-top: 1px solid #f3f1f0;
+    }
+    .table {
+        > tbody, > thead {
+            > tr {
+                > td:first-child,
+                > th:first-child {
+                    padding-left: @whiteboard-horizontal-space;
+                }
+                > td:last-child,
+                > th:last-child {
+                    padding-right: @whiteboard-horizontal-space;
+                }
+            }
+        }
+    }
+}
+
+.whiteboard-stubs {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    // &.-restore-horizontal-space {
+    //     padding-left: @whiteboard-horizontal-space;
+    //     padding-right: @whiteboard-horizontal-space;
+    // }
+    &.-sep-bottom {
+        border-bottom: 4px solid #f3f1f0;
+    }
+    &.-sep-top {
+        border-top: 4px solid #f3f1f0;
+    }
+    &.-no-top-padding {
+        padding-top: 0;
+    }
+    &.-sizing-compact {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+// FIXME:
+.whiteboard-section {
+    padding: 40px @whiteboard-horizontal-space + 10px;
+    margin: 0 -@whiteboard-horizontal-space;
+    border-bottom: 1px solid #f3f1f0;
+    &:last-child {
+        border-bottom: 0 none;
+        // padding-bottom: 20px;
+    }
+}
+
+    .whiteboard-section-title {
+        font-size: 16px;
+        margin: 0 0 25px;
+    }

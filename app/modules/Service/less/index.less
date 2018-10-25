@@ -1,0 +1,109 @@
+@import "app/components/Bootstrap/index.less";
+@import "variable.less";
+@import "ninja.less";
+@import "fonts.less";
+
+.service-picker-cont {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.services {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+    display: inline-block;
+
+    li {
+        width: 20%;
+        padding: 0;
+        text-align: center;
+        margin: 0 0 44px;
+        cursor: pointer;
+        float: left;
+
+        &.active,
+        &:hover {
+            .-icon-cont {
+                border-color: @green;
+            }
+
+            svg {
+                path {
+                    fill: @green;
+                }
+            }
+        }
+    }
+
+    .-icon-cont {
+        .rounded-square(80px, 100%);
+        transition: border-color 300ms linear;
+        border: 6px solid rgb(244, 244, 243);
+        position: relative;
+        margin: 0 auto;
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            max-width: 42px;
+            max-height: 47px;
+        }
+    }
+    .-name {
+        display: block;
+        .font-medium;
+        font-size: 12px;
+        line-height: 1;
+        margin-top: 18px;
+        color: @text-color;
+    }
+
+    .-price {
+        display: block;
+        .font-light;
+        font-size: 12px;
+        line-height: 2;
+        color: @text-color;
+    }
+
+    svg {
+        path {
+            fill: #ccc;
+            .transition(fill 300ms linear);
+        }
+    }
+}
+
+.service {
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 978px) {
+    .services {
+        li {
+            margin-bottom: 15px;
+        }
+
+        span {
+            margin-top: 7px;
+        }
+
+        .service {
+            padding: 0 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .services {
+        .icon-cont {
+            .rounded-square(70px, 100%);
+        }
+    }
+}

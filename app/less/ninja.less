@@ -1,0 +1,38 @@
+// ninja.less
+// Git: https://github.com/sandeepjain/less-ninja
+// This is the collection of reusable less based snippet to help you write faster css.
+// -----------------------------------------------------------------
+
+// UTILITY MIXINS
+// --------------------------------------------------
+
+// Clearfix
+// -------------------------
+// For clearing floats like a boss h5bp.com/q
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Sizing shortcuts
+// -------------------------
+.size(@height: 5px, @width: 5px) {
+  width: @width;
+  height: @height;
+}
+
+.square(@size: 5px) {
+  .size(@size, @size);
+}
+
+.rounded-square(@size, @radius: 5px) {
+    .size(@size, @size);
+    border-radius: @radius;
+}

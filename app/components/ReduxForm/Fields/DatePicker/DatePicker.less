@@ -1,0 +1,33 @@
+@import '../../../../less/variable.less';
+
+.datepicker {
+    position: relative;
+}
+    .datepicker-label {
+        cursor: pointer;
+        color: @green;
+        .font-medium;
+        font-weight: 500;
+        line-height: 1.5;
+        font-size: 16px;
+        margin-top: 18px;
+        display: inline-block;
+        width: 100%;
+        &.-error {
+            color: @brand-danger;
+        }
+        &.-selected {
+            color: @gray-dark;
+        }
+    }
+
+    .datepicker-calendar {
+        position: absolute;
+        z-index: 10;
+        left: -1px;
+        top: 0px;
+        width: 310px;
+        background-color: #fff;
+        display: block;
+        right: 0;
+    }

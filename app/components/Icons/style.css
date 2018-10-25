@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'InstaAdmin';
+  src:  url('./fonts/InstaAdmin.eot?ltvh4s');
+  src:  url('./fonts/InstaAdmin.eot?ltvh4s#iefix') format('embedded-opentype'),
+    url('./fonts/InstaAdmin.ttf?ltvh4s') format('truetype'),
+    url('./fonts/InstaAdmin.woff?ltvh4s') format('woff'),
+    url('./fonts/InstaAdmin.svg?ltvh4s#InstaAdmin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'InstaAdmin' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-long-arrow-left:before {
+  content: "\e901";
+}
+.icon-long-arrow-right:before {
+  content: "\e900";
+}
+.icon-search:before {
+  content: "\f002";
+}
+.icon-star:before {
+  content: "\f005";
+}
+.icon-check:before {
+  content: "\f00c";
+}
+.icon-chevron-left:before {
+  content: "\f053";
+}
+.icon-chevron-right:before {
+  content: "\f054";
+}
+.icon-ban:before {
+  content: "\f05e";
+}
+.icon-sort-desc:before {
+  content: "\f0dd";
+}
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+.icon-sort-asc:before {
+  content: "\f0de";
+}
+.icon-sort-up:before {
+  content: "\f0de";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-star-half-full:before {
+  content: "\f123";
+}
+.icon-calendar-o:before {
+  content: "\f133";
+}
+

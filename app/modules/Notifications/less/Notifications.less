@@ -1,0 +1,70 @@
+.notifications-head {
+    border-bottom: 4px solid #f3f1f0;
+    padding: 10px 80px 20px 80px;
+    a {
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 30px;
+        display: inline-block;
+        &.-delete-btn {
+            color: #3c3c3c;
+            > div {
+                > div {
+                    margin-top: -5px;
+                }
+            }
+        }
+        &.-mark-read-btn {
+            svg {
+                width: 17.7px;
+                height: 12.2px;
+            }
+            path {
+                fill: #00aa3c;
+            }
+        }
+        > div {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 5px;
+            > div {
+                display: inline-block;
+            }
+        }
+    }
+}
+.notification-wrap {
+    border-bottom: 4px solid #f3f1f0;
+    padding: 20px 80px 20px 130px;
+    position: relative;
+    &.-highlight {
+        background-color: #e6f1e2;
+    }
+    .-unread {
+        width: 10px;
+        height: 10px;
+        background-color: #d4695d;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        margin-top: -5px;
+        left: 80px;
+    }
+    p {
+        margin-bottom: 5px;
+        &.-text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        &.-date {
+            font-size: 12px;
+            color: #9b9b9b;
+            line-height: 1.33;
+        }
+    }
+    a {
+    }
+    .-tip {
+        color: #FF4170;
+    }
+}

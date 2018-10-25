@@ -1,0 +1,138 @@
+.rooms-container {
+    .-header {
+        color: #4A410D;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px;
+    }
+    .-horizontal-line, .-horizontal-line-small {
+        width: 250px;
+        height: 4px;
+        background-color: #4A410D;
+        margin: auto;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        margin-top: 25px;
+    }
+    .-horizontal-line-small {
+        width: 150px;
+        height: 3px;
+    }
+    .-introduction-header {
+        &.row {
+            margin: 0px;
+        }
+        .-content {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.3;
+        }
+    }
+    .-rooms-data-container {
+        .-loader-container {
+            width: 100%;
+            min-height: 150px;
+            margin-top: 75px;
+            text-align: center;
+        }
+        .-available-rooms {
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #3C1C07;
+            // display: flex;
+            .-display-picture {
+                // width: 30%;
+                .-image {
+
+                }
+            }
+            .-room-info {
+                // margin-left: 15px;
+                // width: 50%;
+                .-name {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #4E4307;
+                    margin-bottom: 10px;
+                }
+                .-aminities {
+                    display: flex;
+                    .-aminity {
+                        width: 20%;
+                        height: 55px;
+                        font-size: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px;
+                        text-align: center;
+                        .-value {
+                            flex: 1;
+                        }
+                        .-type {
+                            height: 20px;
+                        }
+                    }
+                }
+                .-size {
+                    margin-top: 10px;
+                    font-size: 15px;
+                }
+                .-warning {
+                    font-style: italic;
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+                .-note {
+                    margin-top: 5px;
+                    font-weight: bold;
+                }
+                .-child-age-limit {
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+            }
+            .-price {
+                .-rate-title {
+                    font-size: 17px;
+                    color: #8c4507;
+                    margin-bottom: 3px;
+                }
+                .-cost {
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                    .-weekend {
+
+                    }
+                    .-weekday {
+
+                    }
+                    .-extra {
+
+                    }
+                }
+                .-total-cost {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    .-title {
+                        font-weight: bold;
+                        color: #8c4507;
+                    }
+                    .-cost {
+                        color: #D6B704;
+                        margin-top: 5px;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+                .-reserve-room {
+                    text-align: center;
+                    .-button {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.filter-options-wrap {
+    padding: 0 0 0 0px;
+    display: inline-block;
+    position: relative;
+    min-width: 178px;
+    &.default {
+        .filter-options {
+            li {
+                &:after {
+                    content: "\E258";
+                    font-family: 'Glyphicons Halflings';
+                    font-size: 10px;
+                    color: #00aa3c;
+                    padding-left: 5px;
+                }
+                a {
+                    color: #00aa3c;
+                }
+            }
+        }
+    }
+    img {
+        max-width: 19px;
+        margin-right: 6px;
+    }
+    label {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-right: 12px;
+        font-weight: normal;
+    }
+    .-title {
+        font-size: 12px;
+        font-weight: bold;
+        color: #00aa3c;
+        display: inline-block;
+        //min-width: 136px;
+        &:after {
+            content: "\e252";
+            font-family: 'Glyphicons Halflings';
+            margin-left: 5px;
+            font-size: 0.65em;
+        }
+    }
+    .filter-options {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+        border-radius:3px;
+        background: white;
+        z-index: 1;
+        border-top: 1px solid #f3f1f0;
+        padding-left: 0;
+        li {
+            list-style: none;
+            padding: 15px 15px;
+            border-bottom: 1px solid #f3f1f0;
+            a {
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: bold;
+                color: #3c3c3c;
+                &:hover {
+                    color: #00aa3c;
+                }
+            }
+            &.active {
+                a {
+                    color: #00aa3c;
+                    &:before {
+                        font-family: 'Glyphicons Halflings';
+                        content: "\E013";
+                        margin-right: 5px;
+                        font-size: 0.95em;
+                    }
+                }
+            }
+        }
+    }
+    &.active{
+        .filter-options {
+            display: block;
+        }
+        .-title {
+            &:after {
+                content: "\e253";
+            }
+        }
+    }
+}

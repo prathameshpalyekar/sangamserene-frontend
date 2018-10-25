@@ -1,0 +1,111 @@
+{
+    "data":[
+        {
+            "clientPrice":"290",
+            "clientPriceMultiplier":2.32,
+            "createdAt":"2016-05-25T12:13:34.623Z",
+            "customPricing":true,
+            "description":"Jobb inom kategorin servering är servicejobb där du serverar mat och dryck till kundens gäster i restaurang- eller storköksmiljö. Inom servering är du lyhörd, hjälpsam och mån om att gästerna har det bra. Du gillar att träffa människor och bjuder gärna på ett leende. Gillar du mat och dryck är det ju självklart ett plus.",
+            "id":"3cfeb35d-8b88-4249-a8c3-b1d85f153106",
+            "invoiceSystemName":"308",
+            "maxPrice":200,
+            "minPrice":125,
+            "name":"Servering",
+            "price":"125",
+            "systemName":"SS07",
+            "updatedAt":"2016-05-25T12:13:34.623Z"
+        },
+        {
+            "clientPrice":"290",
+            "createdAt":"2016-04-15T10:13:21.108Z",
+            "description":"Jobb inom kategorin värd eller värdinna är servicejobb där du hjälper besökare eller kunder till rätta. Som värd eller värdinna är du hjälpsam, öppen och social, och gillar att lösa problem för att göra besökare eller kunder nöjda. Du gillar att träffa människor och bjuder gärna på ett leende.",
+            "id":"bc849d4b-5694-44d0-95fe-e4fce3bf5812",
+            "invoiceSystemName":"305",
+            "name":"Värd/Värdinna",
+            "price":"125",
+            "systemName":"SS04",
+            "updatedAt":"2016-05-25T12:10:26.538Z"
+        },
+        {
+            "clientPrice":"290",
+            "createdAt":"2016-05-25T12:11:48.371Z",
+            "description":"Jobb inom kategorin IT-support är för dig som gillar IT, teknik och vill hjälpa till. Du som inte redan är en fena på IT och teknik behöver vara duktig på att sätta dig in i nya problem, och snabbt kunna lära dig ett system. Framförallt behöver du vara duktig på att förklara saker för andra.",
+            "id":"172cd816-74cd-4b1c-85ab-ee5647f85f3d",
+            "invoiceSystemName":"306",
+            "name":"IT-stöd",
+            "price":"125",
+            "systemName":"SS05",
+            "updatedAt":"2016-05-25T12:11:48.371Z"
+        },
+        {
+            "clientPrice":"290",
+            "createdAt":"2016-04-15T10:12:54.771Z",
+            "description":"Jobb inom kategorin allt-i-allo är fixarjobb där du hjälper till med just det som behöver fixas. Som allt-i-allo ser du alltid saker som kan fixas, tar egna initiativ och har inga problem att ta i om och när det behövs. Du tycker helt enkelt det är kul med lite allt möjligt och är en naturlig problemlösare.",
+            "id":"0b83afd3-9978-4474-8362-c5dd3cf8ff4b",
+            "invoiceSystemName":"304",
+            "name":"Allt-i-allo",
+            "price":"125",
+            "systemName":"SS03",
+            "updatedAt":"2016-05-25T12:09:45.706Z"
+        },
+        {
+            "clientPrice":"290",
+            "clientPriceMultiplier":2.32,
+            "createdAt":"2016-04-15T10:12:38.504Z",
+            "customPricing":true,
+            "description":"Att arbeta i butik kräver att du är snabb på fötterna och service-minded. Här gäller det att du är uppmärksam, kundfokuserad, ansvarsfull och alltid kan hjälpa kunden även om du inte själv alltid har svaret.",
+            "id":"d711fdc5-3fab-42fb-8816-b527b20ec602",
+            "invoiceSystemName":"303",
+            "maxPrice":200,
+            "minPrice":125,
+            "name":"Butik",
+            "price":"125",
+            "systemName":"SS02",
+            "updatedAt":"2016-05-25T12:08:33.337Z"
+        },
+        {
+            "clientPrice":"290",
+            "createdAt":"2016-04-15T10:12:07.516Z",
+            "description":"Inom kategorin administratör arbetar du med administrativa uppgifter som arkivering, registrering eller andra pappersarbeten. Som administratör gillar du detaljer och ordning och reda. Du har lätt för att sätta dig in i nya uppgifter och frågar om du inte förstår. Inom denna typen av jobb är det meriterande om du har datorvana och kan office-paketet.",
+            "id":"ee31f11d-56a2-4c5b-9089-73ba33d245af",
+            "invoiceSystemName":"301",
+            "name":"Administratör",
+            "price":"125",
+            "systemName":"SS00",
+            "updatedAt":"2016-05-25T12:07:34.033Z"
+        },
+        {
+            "clientPrice":"290",
+            "createdAt":"2016-05-25T12:12:20.746Z",
+            "description":"Jobb inom kategorin receptionist är servicejobb där du hjälper besökare eller kunder till rätta. Som receptionist är du hjälpsam, öppen och social, och gillar att lösa problem för att göra besökare eller kunder nöjda. Du gillar att prata med människor, både på mail, telefon och i person - och bjuder gärna på ett leende.",
+            "id":"117dc40c-bb45-4e58-ae2d-4267ecafd429",
+            "invoiceSystemName":"307",
+            "name":"Receptionist",
+            "price":"125",
+            "systemName":"SS06",
+            "updatedAt":"2016-05-25T12:12:20.746Z"
+        },
+        {
+            "clientPrice":"290",
+            "createdAt":"2016-04-15T10:12:23.194Z",
+            "description":"Jobb inom kategorin event är servicejobb där du tillsammans med andra arbetar som ett lag för att allt ska flyta smidigt på eventet. På eventjobb tar du egna initiativ, är öppen och social, och gillar att lösa alla möjliga typer av problem som dyker upp på plats. Du gillar att träffa människor, tar gärna ansvar och har snabba ben – alltid med ett leende",
+            "id":"fe2a9d98-6766-44d5-8f35-8918a6f37dce",
+            "invoiceSystemName":"302",
+            "name":"Event",
+            "price":"125",
+            "systemName":"SS01",
+            "updatedAt":"2016-05-25T12:08:09.643Z"
+        },
+        {
+            "clientPrice":"290",
+            "createdAt":"2016-05-25T12:14:18.541Z",
+            "description":"Jobb inom kategorin lärarvikarie är lärarjobb där du vikarierar i skolans värld. Som lärarvikarie behöver du ha tålamod, vara pedagogisk, och såklart gilla skolan. Du behöver också ha god hand med barn och ungdomar. Har du erfarenhet som ungdomsledare, barnvakt, idrottstränare eller från förskola är det meriterande",
+            "id":"c07edc52-55cd-403d-9707-1a2eb0db3644",
+            "invoiceSystemName":"309",
+            "name":"Lärarvikarie",
+            "price":"125",
+            "systemName":"SS08",
+            "updatedAt":"2016-05-25T12:14:18.541Z"
+        }
+    ]
+}

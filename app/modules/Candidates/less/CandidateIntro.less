@@ -1,0 +1,136 @@
+.candidate-intro {
+    padding-top: 25px;
+    text-align: center;
+    position: relative;
+    .start-conversation {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+    .avatar {
+        position: relative;
+        border-radius: 85px;
+        width: 170px;
+        height: 170px;
+        background-size: cover;
+        margin: auto auto;
+    }
+    .exp-lvl {
+        position: absolute;
+        top: 0px;
+        left: -20%;
+        font-family: Gotham-Book;
+        font-size: 14px;
+        letter-spacing: -0.03em;
+        padding: 10px;
+        color: white;
+        border-radius: 20px;
+        background-color: #616D77;
+    }
+    .favourite-container {
+        position: absolute;
+        bottom: 0px;
+        left: 79%;
+        width: 110px;
+        .favourite {
+            position: relative;
+        }
+        .heart-container {
+            display: inline-block;
+            font-size: 38px;
+            color: #00aa3c;
+            background: black;
+            text-align: center;
+            span {
+                text-align: center;
+                line-height: 40px;
+                &.outer-heart {
+                    position: absolute;
+                    left: 0;
+                    color: white;
+                    font-size: 45px;
+                }
+                &.inner-heart {
+                    position: absolute;
+                    left: 3px;
+                    top: -0.5px;
+                }
+            }
+        }
+        .-desc {
+            min-width: 71px;
+            display: inline-block;
+            color: #b8b8b7;
+            line-height: 1.2em;
+            vertical-align: top;
+            text-align: left;
+            padding: 10px 0px 10px 45px;
+            font-size: 11px;
+            letter-spacing: -0.03em;
+        }
+    }
+    .name {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.33;
+        margin-top: 20px;
+        color: #3c3c3c;
+    }
+    .location {
+        font-size: 14px;
+        color: #3c3c3c;
+    }
+    .rating {
+        margin-bottom: 22px;
+        .rating-component {
+            display: inline-block;
+        }
+        .reviews {
+            a {
+                font-size: 12px;
+                font-weight: bold;
+                vertical-align: top;
+                margin-left: 7px;
+                margin-top: 2px;
+                display: inline-block;
+            }
+        }
+    }
+    .-overview {
+        .-name {
+            font-size: 6px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+        .-value {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.22;
+            color: #00aa3c;
+        }
+        img {
+            width: 20px;
+        }
+        .tile {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 8px;
+                bottom: 8px;
+                width: 1px;
+                opacity: 0.35;
+                background-color: #5a6e78;
+            }
+            &:last-child {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

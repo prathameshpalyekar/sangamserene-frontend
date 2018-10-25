@@ -1,0 +1,29 @@
+.candidate-services {
+    margin-bottom: 20px;
+    .-name, .-exp {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #3c3c3c;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .-exp {
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .candidate-service {
+        .-separator {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                height: 1px;
+                left: 15px;
+                right: 15px;
+                bottom: 0;
+                background-color: #b8b8b7;
+            }
+        }
+    }
+}

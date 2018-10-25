@@ -1,0 +1,94 @@
+@import '../../../less/variable.less';
+@import '~rc-time-picker/assets/index.css';
+
+// .time-picker {
+//     display: inline-block;
+//     vertical-align: top;
+//     margin-top: 8px;
+//     max-width: 81px;
+//     position: relative;
+//     &.from-time-picker {
+//         margin-right: 40px;
+//         &:after {
+//             content: "-";
+//             position: absolute;
+//             right: -22px;
+//             top: 12px;
+//         }
+//     }
+//     &.-error {
+//         .rc-time-picker-input {
+//             border-color: @brand-danger;
+//             box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+//             &:focus {
+//                 border-color: darken(@brand-danger, 10%);
+//                 box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@brand-danger, 20%);
+//             }
+//         }
+//     }
+// }
+
+.rc-time-picker {
+    &.-error {
+        .rc-time-picker-input {
+            border-color: @brand-danger;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            &:focus {
+                border-color: darken(@brand-danger, 10%);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@brand-danger, 20%);
+            }
+        }
+    }
+}
+
+.rc-time-picker-input {
+    display: inline-block;
+    padding: 0 15px;
+    .font-book;
+    line-height: 2.75;
+    font-size: 16px;
+    color: #3c3c3c;
+    max-width: 81px;
+    height: auto;
+}
+
+
+.rc-time-picker-panel-select li {
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 978px) {
+    .mobile-time-picker {
+        display: flex;
+        width: 100%;
+        padding: 15px 20px;
+        background-color: #f3f1f0;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        box-sizing: border-box;
+        border-radius: 3px;
+
+        input[type=time] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            border: none;
+            box-shadow: none;
+            box-sizing: border-box;
+            max-width: 120px;
+            width: 100%;
+            vertical-align: top;
+            padding: 8px 10px;
+            .font-book;
+            font-size: 12px;
+        }
+
+        .field-separator {
+            margin: 0 15px;
+        }
+    }
+}
+

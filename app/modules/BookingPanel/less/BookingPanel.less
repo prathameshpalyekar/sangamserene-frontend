@@ -1,0 +1,149 @@
+.booking-panel-container {
+    .-customer-booking-container {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #3C1C07;
+        .-booking-time {
+            display: flex;
+            text-align: center;
+            .-check-in {
+                width: 45%;
+                .-check-in-date {
+                    color: #4E4307;
+                    font-weight: bold;
+                }
+                .-check-in-title {
+                    color: #D6B704;
+                    font-size: 15px;
+                    margin-top: 5px;
+                }
+            }
+            .-arrow-icon {
+                width: 10%;
+            }
+            .-check-out {
+                width: 45%;
+                .-check-out-date {
+                    color: #4E4307;
+                    font-weight: bold;
+                }
+                .-check-out-title {
+                    color: #D6B704;
+                    font-size: 15px;
+                    margin-top: 5px;
+                }
+            }
+        }
+        .-booking-rooms {
+            margin-top: 10px;
+            .-room-header {
+                display: flex;
+                .-index-title, .-adults-title, .-children-title, .-extras-title {
+                    flex-grow: 1;
+                    flex-basis: 0;
+                    text-align: center;
+                }
+            }
+            .-room-row {
+                display: flex;
+                .-room-index, .-adults, .-children, .-extras {
+                    flex-grow: 1;
+                    flex-basis: 0;
+                    text-align: center;
+                    color: #D6B704;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .-horizontal-line {
+            width: 80%;
+            height: 2px;
+            background-color: #D6B704;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            margin: 20px auto 5px;
+            // margin-top: 20px;
+            // margin-bottom: 20px;
+        }
+        .-reserved-rooms {
+            .-reserved-rooms-header {
+                display: flex;
+                text-align: center;
+                color: #D6B704;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                margin-top: 15px;
+                .-room {
+                    width: 50%;
+                }
+                .-cost {
+                    width: 50%;
+                }
+            }
+            .-reserved-rooms {
+                .-room-row {
+                    display: flex;
+                    text-align: center;
+                    margin-bottom: 5px;
+                    .-name {
+                        width: 50%;
+                    }
+                    .-cost {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        .-book-now {
+            text-align: center;
+            margin: 15px;
+            margin-top: 25px;
+            .-button {
+                font-size: 15px;
+            }
+        }
+    }
+    .-booking-form-container {
+        margin-top: 20px;
+        .-header {
+            font-size: 24px;
+            color: #4E4307;
+        }
+        .-booking-form {
+            padding: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            .-title {
+                font-size: 17px;
+                margin-bottom: 20px;
+            }
+            .-food-preferences {
+                .-food-title {
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+                }
+                .-group {
+                    .form-group {
+                        width: 50%;
+                        display: inline-block;
+                    }
+                    .-person {
+                        margin-left: 10px;
+                        display: inline-block;
+                    }
+                }
+            }
+            .-btn-submit {
+                &:hover {
+                    background-color: #f4eab1;
+                }
+            }
+        }
+    }
+}
+
+.tems-data-modal {
+    margin-top: 50px !important;
+    min-width: 80%;
+}

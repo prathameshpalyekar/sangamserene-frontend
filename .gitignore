@@ -1,0 +1,5 @@
+node_modules/
+dist/
+/assets/
+.DS_STORE
+assets/.DS_STORE

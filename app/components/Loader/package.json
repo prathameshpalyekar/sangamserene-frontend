@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "name": "Loader",
+  "main": "./Loader.jsx"
+}

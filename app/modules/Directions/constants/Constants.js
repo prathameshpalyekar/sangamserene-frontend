@@ -1,0 +1,1 @@
+export const MAP_SRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8893.494681168058!2d73.53327085149594!3d17.213001558360084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x507c18d586e8224a!2sSangam+Serene+Agro+Farm!5e0!3m2!1sen!2sus!4v1536519632706";

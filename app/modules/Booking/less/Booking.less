@@ -1,0 +1,220 @@
+.booking-container {
+    .-booking {
+        padding: 0px 20px;
+        &.row {
+            margin: auto 0px;
+        }
+        .-customer-booking-container {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #3C1C07;
+            .-booking-time {
+                display: flex;
+                text-align: center;
+                .-check-in {
+                    width: 45%;
+                    .-check-in-date {
+                        color: #4E4307;
+                        font-weight: bold;
+                    }
+                    .-check-in-title {
+                        color: #D6B704;
+                        font-size: 15px;
+                        margin-top: 5px;
+                    }
+                }
+                .-arrow-icon {
+                    width: 10%;
+                }
+                .-check-out {
+                    width: 45%;
+                    .-check-out-date {
+                        color: #4E4307;
+                        font-weight: bold;
+                    }
+                    .-check-out-title {
+                        color: #D6B704;
+                        font-size: 15px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .-booking-rooms {
+                margin-top: 10px;
+                .-room-header {
+                    display: flex;
+                    .-index-title, .-adults-title, .-children-title, .-extras-title {
+                        flex-grow: 1;
+                        flex-basis: 0;
+                        text-align: center;
+                    }
+                }
+                .-room-row {
+                    display: flex;
+                    .-room-index, .-adults, .-children, .-extras {
+                        flex-grow: 1;
+                        flex-basis: 0;
+                        text-align: center;
+                        color: #D6B704;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .-horizontal-line {
+                width: 80%;
+                height: 2px;
+                background-color: #D6B704;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                margin: 20px auto 5px;
+                // margin-top: 20px;
+                // margin-bottom: 20px;
+            }
+            .-reserved-rooms {
+                .-reserved-rooms-header {
+                    display: flex;
+                    text-align: center;
+                    color: #D6B704;
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    margin-top: 15px;
+                    .-room {
+                        width: 50%;
+                    }
+                    .-cost {
+                        width: 50%;
+                    }
+                }
+                .-reserved-rooms {
+                    .-room-row {
+                        display: flex;
+                        text-align: center;
+                        margin-bottom: 5px;
+                        .-name {
+                            width: 50%;
+                        }
+                        .-cost {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .-book-now {
+                text-align: center;
+                margin: 15px;
+                margin-top: 25px;
+                .-button {
+                    font-size: 15px;
+                    &:hover {
+                        background-color: #f4eab1;
+                    }
+                }
+            }
+        }
+        .-available-rooms {
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #3C1C07;
+            // display: flex;
+            .-display-picture {
+                // width: 30%;
+                .-image {
+
+                }
+            }
+            .-room-info {
+                // margin-left: 15px;
+                // width: 50%;
+                .-name {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #D6B704;
+                    margin-bottom: 10px;
+                }
+                .-aminities {
+                    display: flex;
+                    .-aminity {
+                        width: 20%;
+                        height: 55px;
+                        font-size: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px;
+                        text-align: center;
+                        .-value {
+                            flex: 1;
+                        }
+                        .-type {
+                            height: 20px;
+                        }
+                    }
+                }
+                .-size {
+                    margin-top: 10px;
+                    font-size: 15px;
+                }
+                .-warning {
+                    font-style: italic;
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+                .-note {
+                    margin-top: 5px;
+                    font-weight: bold;
+                }
+            }
+            .-price {
+                .-rate-title {
+                    font-size: 17px;
+                    color: #8c4507;
+                    margin-bottom: 3px;
+                }
+                .-cost {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                    .-weekend {
+
+                    }
+                    .-weekday {
+
+                    }
+                    .-extra {
+
+                    }
+                }
+                .-break-up {
+                    font-size: 10px;
+                }
+                .-total-cost {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    .-title {
+                        font-weight: bold;
+                        color: #8c4507;
+                    }
+                    .-cost {
+                        color: #D6B704;
+                        margin-top: 5px;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+                .-reserve-room {
+                    text-align: center;
+                    .-button {
+                        font-size: 15px;
+                        &:hover {
+                            background-color: #f4eab1;
+                        }
+                    }
+                }
+            }
+        }
+        .-current-booking-title {
+            margin: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}

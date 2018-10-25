@@ -1,0 +1,130 @@
+// Variables
+@modal-title-padding: 20px 26px;
+@modal-header-border-color: #dedede;
+@modal-title-line-height: 20px;
+@modal-inner-padding: 20px;
+@modal-footer-padding: 12px;
+@modal-footer-border-color: #dedede;
+@modal-header-bg: #f7f7f7;
+@modal-footer-bg: #f7f7f7;
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.aw-modal-header {
+    padding: @modal-title-padding;
+    border-bottom: 1px solid @modal-header-border-color;
+    &:extend(.clearfix all);
+    background-color: @modal-header-bg;
+}
+// Title text within header
+.aw-modal-title {
+    margin: 0;
+    line-height: @modal-title-line-height;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.aw-modal-body {
+    position: relative;
+    padding: 40px;
+    p {
+        font-size: 14px;
+        line-height: 1.29;
+        color: #3c3c3c;
+    }
+    .btn {
+        outline: none;
+        min-width: 190px;
+        margin-top: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.aw-modal-band {
+    position: relative;
+    padding: @modal-inner-padding;
+    margin-left: -@modal-inner-padding;
+    margin-right: -@modal-inner-padding;
+    background-color: @modal-footer-bg;
+    border-top: 1px solid @modal-footer-border-color;
+    border-bottom: 1px solid @modal-footer-border-color;
+    margin-bottom: 20px;
+    // .aw-fieldset-header,
+    // .aw-fieldset-body {
+        //     padding-left: 0;
+        //     padding-right: 0;
+    // }
+    // .aw-fieldset-header {
+        //     padding-top: 0;
+    // }
+    // .aw-fieldset-body {
+        //     padding-bottom: 0;
+    // }
+}
+
+// Footer (for actions)
+.aw-modal-footer {
+    padding: @modal-inner-padding;
+    text-align: right; // right align buttons
+    border-top: 1px solid @modal-footer-border-color;
+    background-color: @modal-footer-bg;
+    &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
+
+    // Properly space out buttons
+    .pure-butotn + .pure-butotn {
+        margin-left: 5px;
+        margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+    }
+    // but override that for button groups
+    // .btn-group .btn + .btn {
+        //   margin-left: -1px;
+    // }
+    // // and override it for block buttons as well
+    // .btn-block + .btn-block {
+        //   margin-left: 0;
+    // }
+}
+
+.ReactModal__Body--open {
+    overflow: hidden;
+    .ReactModal__Overlay {
+        z-index: 1000;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+.ReactModal__Overlay {
+
+}
+
+.ReactModal__Content {
+    &.modal-dialog {
+        margin-top: 280px;
+    }
+    // top: 100px;
+    max-width: 540px;
+    width: 100%;
+    // padding: 0;
+    border: 0 none;
+    // overflow: auto;
+    // margin: 0 auto;
+    outline: 0 none !important;
+    .modal-content {
+        border-radius: 0;
+    }
+}
+
+.aw-modal-mini {
+    max-width: 380px - 60px;
+    .aw-modal-body,
+    .aw-modal-footer {
+        padding: 30px;
+    }
+    .aw-modal-footer {
+        padding-top: 0;
+        background-color: transparent;
+        border-top: 0 none;
+    }
+}

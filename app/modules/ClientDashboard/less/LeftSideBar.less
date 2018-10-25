@@ -1,0 +1,40 @@
+@import "variable.less";
+.left-sidebar {
+    background: #f3f1f0;
+    height: calc(~"100vh - 68px");
+    .nav {
+        li {
+            a {
+                &.active, &:hover {
+                    background: #5a6e78;
+                    color: #fff;
+                    position: relative;
+                }
+            }
+            a {
+                &.active {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: calc(50% - 10px);
+                        width: 0;
+                        height: 0;
+                        border-top: 8px solid transparent;
+                        border-bottom: 8px solid transparent;
+                        border-right: 8px solid #fff;
+                    }
+                }
+            }
+            a {
+                color: @text-color;
+                padding: 22px 20px;
+                border-radius: 0;
+            }
+        }
+        .-count {
+            // FIXME
+            float: right;
+        }
+    }
+}

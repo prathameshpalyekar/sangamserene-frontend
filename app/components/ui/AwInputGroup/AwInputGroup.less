@@ -1,0 +1,55 @@
+.aw-inputgroup {
+    margin-bottom: 25px;
+    input {
+        margin-bottom: 0;
+        &:first-child:not(:only-child) {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:last-child:not(:only-child) {
+            // border-top: none;
+            margin-top: -1px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &:not(:first-child):not(:last-child):not(:only-child) {
+            // border-top: none;
+            border-radius: 0;
+            margin-top: -1px;
+        }
+    }
+    // for the case if input is wrappped by div for error handling
+    .aw-input-wrapper {
+        position: relative;
+        .placeholder-text {
+            color: #c3c3c3;
+            top: 6px;
+            left: 12px;
+            font-size: 8px;
+            position: absolute;
+            z-index: 2;
+        }
+        &:first-child:not(:only-child) {
+            input {
+                margin-bottom: 0;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        &:last-child:not(:only-child) {
+            input {
+                // border-top: none;
+                margin-top: -1px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+        &:not(:first-child):not(:last-child):not(:only-child) {
+            input {
+                // border-top: none;
+                border-radius: 0;
+                margin-top: -1px;
+            }
+        }
+    }
+}

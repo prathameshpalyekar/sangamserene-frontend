@@ -1,0 +1,40 @@
+.top-nav {
+    padding-right: 20px;
+    margin-top: 20px;
+    li {
+        display: inline-block;
+        padding: 0 11px;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    a {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        &:hover {
+            path {
+                fill: #00aa3c;
+            }
+        }
+        &.active {
+            path {
+                fill: #00aa3c;
+            }
+        }
+        .badge {
+            position: absolute;
+            top: -6px;
+            right: -7px;
+            background-color: #d4695d;
+            min-width: 22px;
+            height: 22px;
+            font-size: 10px;
+            line-height: 20px;
+            text-align: center;
+            padding: 0;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+    }
+}

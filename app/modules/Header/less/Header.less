@@ -1,0 +1,84 @@
+.header-container {
+    .-app-bar {
+        background-color: #FFF;
+        height: 90px;
+        .-menu-container {
+            margin: auto;
+            margin-top: 15px;
+            display: flex;
+            .-menu-list {
+                display: inline-block;
+                margin-top: 10px;
+                .-menu {
+                    list-style: none;
+                    .-menu-item {
+                        display: inline;
+                        .-menu-button {
+                            font-size: 14px;
+                            text-transform: unset;
+                            color: #4E4307;
+                            font-weight: normal;
+                            min-height: 30px;
+                            padding: 4px 16px;
+                            &:hover {
+                                background-color: #f4eab1;
+                            }
+                            &.-first {
+                                border-top-left-radius: 25px;
+                                border-bottom-left-radius: 25px;
+                            }
+                            &.-last {
+                                border-top-right-radius: 25px;
+                                border-bottom-right-radius: 25px;
+                            }
+                        }
+                    }
+                }
+                .-vertical-line {
+                    padding: 3px 0px;
+                    border-right: 1px solid #4E4307;
+                }
+            }
+            .menu-icon-button {
+                color: black;
+                .menu-icon {
+                    font-size: 30px;
+                }
+            }
+            .-book-now {
+                font-size: 14px;
+                margin-left: 5px;
+                color: #4E4307;
+                &:hover {
+                    background-color: #f4eab1;
+                }
+            }
+            .-logo {
+                display: inline-block;
+                color: #4E4307;
+                .-header-name {
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+                .-header-sub-title {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    &.-fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+}
+
+.mobile-menu {
+    .list-button {
+        .list-content {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.conversation-wrap {
+    .whiteboard-title {
+        margin-bottom: 30px;
+    }
+    p {
+        line-height: 1.5;
+    }
+}
+.message-wrapper {
+    position: relative;
+    &:after {
+        content: " ";
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+    .message-text {
+        font-size: 14px;
+        line-height: 1.29;
+        border-radius: 3px;
+        border: solid 1px #cccccc;
+        padding: 10px 30px 21px 20px;
+        max-width: 388px;
+        position: relative;
+        margin-bottom: 10px;
+        display: inline-block;
+        position: relative;
+        .message-time {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 8px;
+        }
+        &.right {
+            background-color: #5a6e78;
+            border: solid 1px #5a6e78;
+            color: #fff;
+            float: right;
+            margin-right: 64px;
+            .candidate-pic {
+                right: -64px;
+            }
+            .-username {
+                color: #fff;
+            }
+        }
+        &.left {
+            margin-left: 64px;
+            .candidate-pic {
+                left: -64px;
+            }
+        }
+
+    }
+    .message-date {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .-username {
+        display: block;
+        color: #00aa3c;
+        font-size: 10px;
+    }
+    .candidate-pic {
+        max-width: 44px;
+        max-height: 44px;
+        position: absolute;
+        top: 0;
+    }
+}
+.messages {
+    height: calc(~"100vh - 68px - 44px - 93px - 34px");
+    overflow: auto;
+    padding-top: 20px;
+}
+.conversation-head {
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #e5ebec;
+    padding-bottom: 22px;
+}

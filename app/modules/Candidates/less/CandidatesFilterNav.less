@@ -1,0 +1,55 @@
+.job-candidates-nav {
+    margin-bottom: 16px;
+    padding: 0 80px;
+    ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    li {
+        width: 25%;
+        float: left;
+        margin: 0 !important;
+        box-sizing: border-box;
+        a {
+            height: 40px;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #3c3c3c;
+            text-align: center;
+            background-color: #f3f1f0;
+            padding: 12px 0 !important;
+            display: block;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                left: -0.5px;
+                top: 8px;
+                bottom: 8px;
+                width: 1px;
+                background: #5a6e78;
+                opacity: 0.35;
+            }
+            span {
+                font-size: 16px;
+                font-weight: bold;
+                margin-left: 5px;
+            }
+            &:hover {
+                background-color: #d5e1e7 !important;
+            }
+            &:focus, &.active {
+                background-color: #5a6e78 !important;
+                color: white;
+            }
+        }
+        &:first-child {
+            a {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

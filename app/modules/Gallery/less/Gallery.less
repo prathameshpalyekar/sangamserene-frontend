@@ -1,0 +1,229 @@
+.gallery-container {
+    // display: flex;
+    // flex-direction: column;
+    // height: 100vh;
+    .-gallery {
+        // position: relative;
+        // top: 20px;
+        margin: 20px 0px;
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow: hidden;
+        // min-height: 400px;
+        .back-arrow, .next-arrow {
+            position: absolute;
+            z-index: 2;
+            color: white;
+            font-size: 70px;
+            top: 35%;
+            cursor: pointer;
+        }
+        .next-arrow {
+            right: 20px;
+        }
+        .back-arrow {
+            left: 20px;
+        }
+        .-grid-list {
+            flex-wrap: nowrap;
+            height: 400px;
+            min-height: 400px;
+            .-grid-column {
+                height: 100% !important;
+                .-grid-tile {
+                    padding: 2px 0px;
+                    width: 100%;
+                    position: relative;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                    .-insta-icon {
+                        position: absolute;
+                        height: 20px;
+                        width: 20px;
+                        cursor: pointer;
+                        top: 7px;
+                        right: 5px;
+                        border-radius: 3px;
+                        .-square-one, .-square-two, .-square-three {
+                            height: 16px;
+                            width: 16px;
+                            position: absolute;
+                            border-radius: 3px;
+                            box-shadow: 1px 1px 1px black;
+                        }
+                        .-square-one {
+                            background-color: white;
+                            z-index: 3;
+                        }
+                        .-square-two {
+                            background-color: transparent;
+                            top: 2px;
+                            left: 2px;
+                        }
+                        .-square-three {
+                            background-color: white;
+                            top: 3px;
+                            left: 3px;
+                        }
+                    }
+                }
+            }
+            .column-1 {
+                width: 250px !important;
+                .tile-1 {
+                    height: 60%;
+                    padding-top: 4px;
+                }
+                .tile-2 {
+                    height: 40%;
+                    padding-bottom: 4px;
+                }
+            }
+            .column-2 {
+                width: 250px !important;
+                .tile-1 {
+                    height: 40%;
+                    padding-top: 4px;
+                }
+                .tile-2 {
+                    height: 60%;
+                    padding-bottom: 4px;
+                }
+            }
+            .column-3 {
+                width: 300px !important;
+                .tile-1 {
+                    height: 70%;
+                    padding-top: 4px;
+                }
+                .tile-2 {
+                    height: 30%;
+                    padding-bottom: 4px;
+                    padding-top: 2px;
+                    .child-tile-1,  .child-tile-2 {
+                        width: 50%;
+                        height: 100%;
+                    }
+                    .child-tile-1 {
+                        padding-right: 2px;
+                    }
+                    .child-tile-2 {
+                        padding-left: 2px;
+                    }
+                }
+            }
+            .column-4 {
+                width: 350px !important;
+                .tile-2 {
+                    height: 70%;
+                    padding-bottom: 4px;
+                }
+                .tile-1 {
+                    height: 30%;
+                    padding-bottom: 2px;
+                    padding-top: 4px;
+                    .child-tile-1,  .child-tile-2 {
+                        width: 50%;
+                        height: 100%;
+                    }
+                    .child-tile-1 {
+                        padding-right: 2px;
+                    }
+                    .child-tile-2 {
+                        padding-left: 2px;
+                    }
+                }
+            }
+            .column-5 {
+                width: 250px !important;
+                .tile-1 {
+                    height: 60%;
+                    padding-top: 4px;
+                }
+                .tile-2 {
+                    height: 40%;
+                    padding-bottom: 4px;
+                }
+            }
+            .column-6 {
+                width: 450px !important;
+                .tile-1 {
+                    height: 100%;
+                    padding: 4px 0px;
+                }
+            }
+        }
+    }
+    .footer-container {
+        width: 100%;
+    }
+}
+
+.mobile-gallery-container {
+    .-mobile-gallery {
+        padding: 4px;
+        .mobile-tile {
+            padding-bottom: 4px;
+            &:last-of-type {
+                padding-bottom: 0px;
+            }
+        }
+    }
+}
+
+.extended-gallery-modal {
+    margin-top: 100px !important;
+    height: 400px;
+    .modal-content {
+        height: 100%;
+        width: 100%;
+    }
+    .-previous-arrow {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+    }
+
+    .-next-arrow {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+
+    .chevron::before {
+        border-style: solid;
+        border-width: 0.25em 0.25em 0 0;
+        content: '';
+        display: inline-block;
+        height: 15px;
+        // left: 0.15em;
+        position: relative;
+        cursor: pointer;
+        // top: 0.15em;
+        transform: rotate(-45deg);
+        vertical-align: top;
+        width: 15px;
+        color: white;
+    }
+
+    .chevron.right:before {
+        left: 0;
+        transform: rotate(45deg);
+    }
+
+    .chevron.left:before {
+        left: 0.25em;
+        transform: rotate(-135deg);
+    }
+
+    .-extended-gallery-image {
+        height: 100%;
+        width: 100%;
+    }
+}

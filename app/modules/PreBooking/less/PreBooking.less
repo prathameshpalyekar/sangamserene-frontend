@@ -1,0 +1,45 @@
+.pre-booking-panel-container {
+    &.row {
+        margin: auto;
+    }
+    .-customer-booking-container {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #3C1C07;
+        text-align: center;
+        .-child-age-limit {
+            font-size: 13px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        .-component {
+            // display: inline-block;
+            padding: 10px;
+            text-align: center;
+            .-date-picker {
+            	margin-bottom: 10px;
+            	width: 90%;
+                input {
+                    font-size: 20px;
+                }
+            }
+            .-input {
+                input {
+                    font-size: 14px;
+                }
+            }
+            &.-search {
+                font-size: 14px;
+                margin-top: 10px;
+                &:hover {
+                    background-color: #f4eab1;
+                }
+                // background-color: #4a410d;
+            }
+            .-room-select {
+                width: 50%;
+                font-size: 1rem;
+            }
+        }
+    }
+}

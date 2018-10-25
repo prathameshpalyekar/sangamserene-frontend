@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "name": "GlobalFooter",
+  "main": "./GlobalFooter.jsx"
+}

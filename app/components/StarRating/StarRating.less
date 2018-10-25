@@ -1,0 +1,54 @@
+@import '../../less/variable.less';
+
+.star-rating {
+    &.-rate {
+    }
+
+    .glyphicon-star {
+        color: @brand-primary;
+        margin-right: 2px;
+        &.empty {
+            color: #ebebeb;
+        }
+        &.half {
+            position: relative;
+            &:before {
+                position: relative;
+                z-index: 9;
+                width: 47%;
+                display: block;
+                overflow: hidden;
+            }
+            &:after {
+                content: '\e006';
+                position: absolute;
+                z-index: 8;
+                color: #ebebeb;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    .-value {
+        position: relative;
+        bottom: 3px;
+        font-size: 76%;
+        font-family: Gotham-Medium;
+        margin-left: 5px;
+    }
+
+    .icon-star,
+    .icon-star-half-full {
+        color: @brand-primary;
+        margin-right: 4px;
+        font-size: 25px;
+        cursor: pointer;
+        &.-empty {
+            color: #ebebeb;
+        }
+    }
+    .-text {
+        margin-left: 10px;
+    }
+}
