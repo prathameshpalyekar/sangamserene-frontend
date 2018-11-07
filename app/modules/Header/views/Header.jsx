@@ -130,6 +130,11 @@ class Header extends Component {
                         </div>
                     </Toolbar>
                 </AppBar>
+                <div className="-offer-container">
+                    <div className="-content">
+                        Diwali exclusive 50% off
+                    </div>
+                </div>
             </div>
         )
     }

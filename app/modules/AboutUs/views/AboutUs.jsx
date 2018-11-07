@@ -69,6 +69,7 @@ class AboutUs extends Component {
                                         Sangam Serene AgroFarm ensures refreshed life of your inner senses and soul.
                                     </div>
                                     <div className="-about-us-info">
+                                        Book your stay at least 7 days prior. No bookings will be done 7 days prior to the booking date.
                                         Book your stay with us online and call us for any assistance. We are happy to help you.
                                     </div>
                                 </div>

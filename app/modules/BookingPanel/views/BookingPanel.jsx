@@ -35,6 +35,10 @@ class BookingPanel extends Component {
         this.closeTerms = this.closeTerms.bind(this);
     }
 
+    componentDidMount() {
+        window.scroll(0, 0);
+    }
+
     showTerms() {
         this.setState({
             showTerms: true
@@ -180,17 +184,18 @@ class Terms extends Component {
     }
 
     onPaymentFailure(BOLT) {
+        console.log(BOLT)
         console.log(BOLT.message)
     }
 
     onSuccess(data) {
-        console.log(data);
+        // console.log(data);
         const { bolt } = window;
         const responseHandler = {
             responseHandler: this.onPaymentSuccess,
             catchException: this.onPaymentFailure,
         };
-        console.log(responseHandler)
+        console.log('before bolt launch', bolt, data);
         bolt.launch(data, responseHandler);
     }
 
@@ -213,7 +218,7 @@ class Terms extends Component {
     }
 
     render() {
-        console.log(this.props.personalData)
+        // console.log(this.props.personalData)
         return (
             <div>
                 <AwModal.Modal

@@ -23,6 +23,10 @@ const AMINITIES_MAP = {
     wc: 'WC',
 }
 
+const DISCOUNT_PERIOD_START = '2018-11-05';
+const DISCOUNT_PERIOD_END = '2018-11-10';
+const DISCOUNT_PERCENT = 50;
+
 class Booking extends Component {
     constructor(props) {
         super(props);
@@ -135,6 +139,9 @@ class Booking extends Component {
                                                 <div className="-name">{room.name}</div>
                                                 <div className="-aminities">
                                                     {aminitiesData.slice(0, 5).map((aminity, index) => {
+                                                        if (aminity.type === 'AC') {
+                                                            aminity.value = false;
+                                                        }
                                                         return (
                                                             <div key={index} className="-aminity">
                                                                 <div className="-value">
@@ -253,8 +260,110 @@ class RoomCost extends Component {
         const { roomsData } = booking;
         const room_price = weekends * price + weekdays * weekday_price;
         const extra_charge = extra_person_charge * roomsData.extras[currentBooking] * daysOfStay;
-        const total_cost = room_price + extra_charge;
+        const discount = this.getDiscountAmount();
+        const total_cost = room_price + extra_charge - discount;
+        // const total_cost = room_price + extra_charge;
         return total_cost;
+    }
+
+    getDiscount(start, end) {
+        // console.log(start, end)
+        const daysOfStay = end.diff(start, 'days');
+        // console.log(daysOfStay)
+        let index = daysOfStay;
+        let weekdays = 0;
+        let weekends = 0;
+        let currentDay = start;
+        while (index > 0) {
+            const currentDateFormat = currentDay.format('E');
+            const isWeekDay = currentDateFormat < 6;
+            if (isWeekDay) {
+                weekdays++;
+            } else {
+                weekends++;
+            }
+            currentDay.add(1, 'day');
+            index--;
+        }
+
+        // console.log(weekdays, weekends)
+        // return {
+        //     weekends,
+        //     weekends
+        // };
+
+        const { room, booking, currentBooking } = this.props;
+        const { roomsData } = booking;
+        const { weekday_price, price, extra_person_charge } = room;
+        const room_price = weekends * price + weekdays * weekday_price;
+        // console.log(room_price)
+        const extra_charge = extra_person_charge * roomsData.extras[currentBooking] * daysOfStay;
+        // console.log(extra_charge)
+        const total_cost = room_price + extra_charge;
+        // console.log(total_cost)
+        const discount = total_cost * DISCOUNT_PERCENT / 100;
+        return discount;
+    }
+
+    getDiscountAmount() {
+        const { room, booking, currentBooking } = this.props;
+        const { weekday_price, price, extra_person_charge } = room;
+        const checkIn = moment(booking.checkIn);
+        const checkOut = moment(booking.checkOut);
+        // Discount Period 
+        const periodStart = moment(DISCOUNT_PERIOD_START);
+        const periodEnd = moment(DISCOUNT_PERIOD_END);
+
+        const isCheckInBeforeDiscountPeriodStart = checkIn.isBefore(periodStart);
+        const isCheckInAfterDiscountPeriodStart = !isCheckInBeforeDiscountPeriodStart;
+
+        const isCheckInAfterDiscountPeriodEnd = periodEnd.isBefore(checkIn);
+        const isCheckOutBeforeDiscountPeriodStart = checkOut.isBefore(periodStart);
+
+        const isCheckOutBeforeDiscountPeriodEnd = checkOut.isBefore(periodEnd);    
+        const isCheckOutAfterDiscountPeriodEnd = !isCheckOutBeforeDiscountPeriodEnd;
+
+        // console.log(isCheckInBeforeDiscountPeriodStart, 'isCheckInBeforeDiscountPeriodStart');
+        // console.log(isCheckOutAfterDiscountPeriodEnd, 'isCheckOutAfterDiscountPeriodEnd');
+        // console.log(isCheckOutBeforeDiscountPeriodEnd, 'isCheckOutBeforeDiscountPeriodEnd');
+
+        // console.log(isCheckInAfterDiscountPeriodStart, 'isCheckInAfterDiscountPeriodStart');
+        // console.log(isCheckOutBeforeDiscountPeriodEnd, 'isCheckOutBeforeDiscountPeriodEnd');
+        // console.log(isCheckOutAfterDiscountPeriodEnd, 'isCheckOutAfterDiscountPeriodEnd');
+        
+        if (isCheckOutBeforeDiscountPeriodStart || isCheckInAfterDiscountPeriodEnd) {
+            return 0;
+        }
+
+        if (isCheckInBeforeDiscountPeriodStart) {
+            if (isCheckOutBeforeDiscountPeriodEnd) {
+                // period start to checkout
+                return this.getDiscount(periodStart, checkOut);
+            }
+
+            if (isCheckOutAfterDiscountPeriodEnd) {
+                // period start to period end
+                return this.getDiscount(periodStart, periodEnd);
+            }
+
+            return 0;
+        }
+
+        if (isCheckInAfterDiscountPeriodStart) {
+            if (isCheckOutBeforeDiscountPeriodEnd) {
+                // checkin to checkout
+                return this.getDiscount(checkIn, checkOut);;
+            }
+
+            if (isCheckOutAfterDiscountPeriodEnd) {
+                // checkIn to period end
+                return this.getDiscount(checkIn, periodEnd);;
+            }
+
+            return 0;
+        }
+
+        return 0;
     }
 
     render() {
@@ -281,7 +390,10 @@ class RoomCost extends Component {
         const { roomsData } = booking;
         const room_price = weekends * price + weekdays * weekday_price;
         const extra_charge = extra_person_charge * roomsData.extras[currentBooking] * daysOfStay;
-        const total_cost = room_price + extra_charge;
+        const discount = this.getDiscountAmount();
+        const total_cost = room_price + extra_charge - discount;
+        
+        // console.log(discount, 'Discount', room.name)
 
         return (
             <div className="-price col-sm-3">
@@ -326,7 +438,13 @@ class RoomCost extends Component {
                     </div>
                 </div>
                 <div className="-total-cost">
-                    <div className="-title">Cost</div>
+                    {discount ?
+                        <div>
+                            <div className="-title">Discount</div>
+                            <div className="-cost">&#8377; {discount}</div>
+                        </div> : null
+                    }
+                    <div className="-title">Final Cost</div>
                     <div className="-cost">&#8377; {total_cost}</div>
                 </div>
                 <div className="-reserve-room">

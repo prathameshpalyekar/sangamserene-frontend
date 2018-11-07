@@ -46,6 +46,10 @@ class PreBooking extends Component {
         this.searchRooms = this.searchRooms.bind(this);
     }
 
+    componentDidMount() {
+        window.scroll(0, 0);
+    }
+
     handleCheckInChange(date) {
         this.setState({
             checkIn: date
@@ -73,11 +77,26 @@ class PreBooking extends Component {
     }
 
     onRoomsSelect(data) {
-        this.setState({
-            roomsData: data,
-            showRoomSelectorForm: false,
-            enableSearch: true
-        })
+        // this.setState({
+        //     roomsData: data,
+        //     showRoomSelectorForm: false,
+        //     enableSearch: true
+        // })
+
+        const roomsData = data;
+        const { rooms } = this.state;
+        const checkIn = this.state.checkIn ? this.state.checkIn.format('YYYY-MM-DD') : null;
+        const checkOut = this.state.checkOut ? this.state.checkOut.format('YYYY-MM-DD') : null;
+        const booking = Object.assign({}, {checkIn, checkOut, roomsData, rooms});
+        // console.log(booking);
+        const { history } = this.props;
+        const newState = {
+            pathname: '/booking',
+            state: {
+                booking
+            }
+        }
+        history.push(newState);
     }
 
     searchRooms() {
@@ -98,6 +117,8 @@ class PreBooking extends Component {
 
     render() {
         const { checkIn, checkOut, rooms, showRoomSelectorForm, enableSearch } = this.state;
+        const minCheckoutDate = moment(checkIn).add(1, 'day').format('YYYY-MM-DD');
+
         return (
             <div className="pre-booking-panel-container row">
                 <Header isMobile={this.props.isMobile} shouldFixHeader={true}/>
@@ -111,7 +132,7 @@ class PreBooking extends Component {
                                 <DatePicker value={checkIn} onChange={this.handleCheckInChange} emptyLabel="Check In" className="-date-picker" minDate={moment()}/>
                             </div>
                             <div className="-component">
-                                <DatePicker value={checkOut} onChange={this.handleCheckOutChange} emptyLabel="Check Out" className="-date-picker" disabled={!checkIn} minDate={checkIn}/>
+                                <DatePicker value={checkOut} onChange={this.handleCheckOutChange} emptyLabel="Check Out" className="-date-picker" disabled={!checkIn} minDate={minCheckoutDate}/>
                             </div>
                             <div className="-component">
                                 <Select className="-room-select" value={rooms} displayEmpty onChange={this.handleChange} disabled={!checkOut}>
@@ -127,9 +148,7 @@ class PreBooking extends Component {
                             <div className="-child-age-limit">
                                 * Children above 6 years will be considered as an adult.
                             </div>
-                            <Button variant="raised" color="default" className="-component -search" disabled={!enableSearch} onClick={this.searchRooms}>
-                                Search
-                            </Button>
+                            
                         </MuiPickersUtilsProvider>
                     </Paper>
                 </div>

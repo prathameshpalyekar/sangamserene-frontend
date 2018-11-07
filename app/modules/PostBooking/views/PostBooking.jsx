@@ -32,6 +32,7 @@ class PostBooking extends Component {
         const { booking } = state;
         const { reservedRooms, checkIn, checkOut, name, email, phoneNumber, payment, paymentResponse, address } = booking;
         const { txnid } = paymentResponse;
+        window.scroll(0, 0);
         // console.log(booking)
         const { Config, UiConfig } = FirebaseConfig;
         if (firebase.apps.length === 0) {

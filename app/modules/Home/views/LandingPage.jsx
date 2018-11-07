@@ -110,6 +110,7 @@ class LandingPage extends Component {
     render() {
         const { checkIn, checkOut, rooms, showRoomSelectorForm, enableSearch } = this.state;
         const { isMobile } = this.props;
+        const minCheckoutDate = moment(checkIn).add(1, 'day').format('YYYY-MM-DD');
 
         return (
             <div className="landing-page">
@@ -119,7 +120,7 @@ class LandingPage extends Component {
                             <DatePicker value={checkIn} onChange={this.handleCheckInChange} emptyLabel="Check In" className="-date-picker" minDate={moment()}/>
                         </div>
                         <div className="-component">
-                            <DatePicker value={checkOut} onChange={this.handleCheckOutChange} emptyLabel="Check Out" className="-date-picker" disabled={!checkIn} minDate={checkIn}/>
+                            <DatePicker value={checkOut} onChange={this.handleCheckOutChange} emptyLabel="Check Out" className="-date-picker" disabled={!checkIn} minDate={minCheckoutDate}/>
                         </div>
                         <div className="-component">
                             <Select className="-room-select" value={rooms} displayEmpty onChange={this.handleChange} disabled={!checkOut}>

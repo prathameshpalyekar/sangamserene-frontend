@@ -12,10 +12,10 @@ import ChevronRight from '@material-ui/icons/ChevronRight';
 import AwModal from 'components/ui/AwModal';
 
 const TILES = [
-    '../../../../assets/images/gallery/slide1.jpeg',
-    '../../../../assets/images/gallery/slide2.jpeg',
     '../../../../assets/images/gallery/slide3.jpeg',
     '../../../../assets/images/gallery/slide4.jpeg',
+    '../../../../assets/images/gallery/slide1.jpeg',
+    '../../../../assets/images/gallery/slide2.jpeg',
     '../../../../assets/images/gallery/slide5.jpeg',
     '../../../../assets/images/gallery/slide6.jpg',
     '../../../../assets/images/gallery/slide7.jpeg',
@@ -28,6 +28,8 @@ const TILES = [
 ];
 
 const ExtendedTiles = [
+    [],
+    [],
     [
         '../../../../assets/images/gallery/Slide1/slide1.jpeg',
         '../../../../assets/images/gallery/Slide1/slide2.jpeg',
@@ -43,14 +45,34 @@ const ExtendedTiles = [
         '../../../../assets/images/gallery/Slide2/slide7.jpeg',
         '../../../../assets/images/gallery/Slide2/slide8.jpeg',
     ],
-    [],
-    [],
     [
         '../../../../assets/images/gallery/Slide5/slide1.jpeg',
         '../../../../assets/images/gallery/Slide5/slide2.jpeg',
         '../../../../assets/images/gallery/Slide5/slide3.jpeg',
         '../../../../assets/images/gallery/Slide5/slide4.jpeg',
         '../../../../assets/images/gallery/Slide5/slide5.jpeg',
+    ],
+    [],
+    [],
+    [],
+    [
+        '../../../../assets/images/gallery/Slide8/slide1.jpg',
+        '../../../../assets/images/gallery/Slide8/slide2.jpg',
+        '../../../../assets/images/gallery/Slide8/slide3.jpg',
+        '../../../../assets/images/gallery/Slide8/slide4.jpg',
+        '../../../../assets/images/gallery/Slide8/slide5.jpg',
+        '../../../../assets/images/gallery/Slide8/slide6.jpg',
+        '../../../../assets/images/gallery/Slide8/slide7.jpg',
+        '../../../../assets/images/gallery/Slide8/slide8.jpg',
+    ],
+    [
+        '../../../../assets/images/gallery/Slide9/slide1.jpeg',
+        '../../../../assets/images/gallery/Slide9/slide2.jpeg',
+        '../../../../assets/images/gallery/Slide9/slide3.jpeg',
+        '../../../../assets/images/gallery/Slide9/slide4.jpeg',
+        '../../../../assets/images/gallery/Slide9/slide5.jpeg',
+        '../../../../assets/images/gallery/Slide9/slide6.jpeg',
+        '../../../../assets/images/gallery/Slide9/slide7.jpeg',
     ]
 ]
 
@@ -125,18 +147,19 @@ class Gallery extends Component {
                 {hideNextArrow ? null : <ChevronRight className="next-arrow" onClick={this.shiftRight}></ChevronRight>}
                 <GridList cols={4} className="-grid-list" ref="gallery">
                     <GridListTile cols={1} className="-grid-column column-1">
-                        <div className="-grid-tile tile-1">
-                            {this.renderInstaIcon(0)}
-                            <img src={TILES[0]} className=""/>
-                        </div>
-                        <div className="-grid-tile tile-2">
-                            {this.renderInstaIcon(1)}
-                            <img src={TILES[1]} className=""/>
-                        </div>
+                        <img src={TILES[0]} className="-grid-tile tile-1"/>
+                        <img src={TILES[1]} className="-grid-tile tile-2"/>
                     </GridListTile>
                     <GridListTile cols={1} className="-grid-column column-2">
-                        <img src={TILES[2]} className="-grid-tile tile-1"/>
-                        <img src={TILES[3]} className="-grid-tile tile-2"/>
+                        <div className="-grid-tile tile-1">
+                            {this.renderInstaIcon(2)}
+                            <img src={TILES[2]} className=""/>
+                        </div>
+                        <div className="-grid-tile tile-2">
+                            {this.renderInstaIcon(3)}
+                            <img src={TILES[3]} className=""/>
+                        </div>
+                        
                     </GridListTile>
                     <GridListTile cols={1} className="-grid-column column-3">
                         <div className="-grid-tile tile-1">
@@ -151,9 +174,15 @@ class Gallery extends Component {
                     <GridListTile cols={1} className="-grid-column column-4">
                         <div className="tile-1">
                             <img src={TILES[7]} className="child-tile-1"/>
-                            <img src={TILES[8]} className="child-tile-2"/>
+                            <div className="-grid-tile child-tile-2">
+                                {this.renderInstaIcon(8)}
+                                <img src={TILES[8]} className=""/>
+                            </div>
                         </div>
-                        <img src={TILES[9]} className="-grid-tile tile-2"/>
+                        <div className="-grid-tile tile-2">
+                            {this.renderInstaIcon(9)}
+                            <img src={TILES[9]} className=""/>
+                        </div>
                     </GridListTile>
                     <GridListTile cols={1} className="-grid-column column-5">
                         <img src={TILES[10]} className="-grid-tile tile-1"/>

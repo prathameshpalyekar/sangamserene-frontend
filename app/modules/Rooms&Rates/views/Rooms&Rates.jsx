@@ -89,7 +89,7 @@ class RoomsRates extends Component {
                         </div> : null 
                     }
                     {roomsAvailable.map((room, index) => {
-                        const { aminities } = room;
+                        const { aminities, weekday_price, price, extra_person_charge } = room;
                         const aminitiesData = Object.keys(aminities).map((key) => {
                             return {
                                 [key]: aminities[key]
@@ -111,6 +111,9 @@ class RoomsRates extends Component {
                                     <div className="-name">{room.name}</div>
                                     <div className="-aminities">
                                         {aminitiesData.slice(0, 5).map((aminity, index) => {
+                                            if (aminity.type === 'AC') {
+                                                aminity.value = false;
+                                            }
                                             return (
                                                 <div key={index} className="-aminity">
                                                     <div className="-value">
@@ -153,6 +156,25 @@ class RoomsRates extends Component {
                                     </div>
                                     <div className="-note">
                                         ** Price is inclusive of food
+                                    </div>
+                                </div>
+                                <div className="-price-info col-sm-3">
+                                    <div className="-title">
+                                        Price
+                                    </div>
+                                    <div className="-cost">
+                                        <div className="-weekend">
+                                            <span className="-weekend-price">Weekend : </span>
+                                            <span>&#8377; {price}</span>
+                                        </div>
+                                        <div className="-weekday">
+                                            <span className="-weekday-price">Weekday : </span>
+                                            <span>&#8377; {weekday_price}</span>
+                                        </div>
+                                        <div className="-extra">
+                                            <span className="-extra-price">Extra Per Person : </span>
+                                            <span>&#8377; {extra_person_charge}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </Paper>
