@@ -24,7 +24,7 @@ const AMINITIES_MAP = {
 }
 
 const DISCOUNT_PERIOD_START = '2018-11-05';
-const DISCOUNT_PERIOD_END = '2018-11-10';
+const DISCOUNT_PERIOD_END = '2018-11-20';
 const DISCOUNT_PERCENT = 50;
 
 class Booking extends Component {
@@ -139,9 +139,6 @@ class Booking extends Component {
                                                 <div className="-name">{room.name}</div>
                                                 <div className="-aminities">
                                                     {aminitiesData.slice(0, 5).map((aminity, index) => {
-                                                        if (aminity.type === 'AC') {
-                                                            aminity.value = false;
-                                                        }
                                                         return (
                                                             <div key={index} className="-aminity">
                                                                 <div className="-value">

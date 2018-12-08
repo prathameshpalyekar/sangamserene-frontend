@@ -111,9 +111,6 @@ class RoomsRates extends Component {
                                     <div className="-name">{room.name}</div>
                                     <div className="-aminities">
                                         {aminitiesData.slice(0, 5).map((aminity, index) => {
-                                            if (aminity.type === 'AC') {
-                                                aminity.value = false;
-                                            }
                                             return (
                                                 <div key={index} className="-aminity">
                                                     <div className="-value">
